@@ -48,3 +48,41 @@
   align-items: center;
   justify-content: center;
 }
+
+.card {
+  width: 200px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  height: 350px;
+  box-shadow: 5px 5px 5px 1px rgba(120,120,120,0.44);
+  -webkit-box-shadow: 5px 5px 5px 1px rgba(120,120,120,0.44);
+  -moz-box-shadow: 5px 5px 5px 1px rgba(120,120,120,0.44);
+}
+
+.hero{
+  background: #FFF;
+  color: red;
+}
+
+
+.relative{
+  position: relative;
+}
+
+.margin{
+  margin-top: 50px;
+}
+
+.top{
+  color: #fff;
+  position: absolute;
+  margin-top: -250px;
+  margin-left: 0;
+}
+
+.bot{
+  color: #fff;
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 0;
+}
