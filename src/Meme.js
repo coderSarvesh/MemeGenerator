@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 
 const Meme = () => {
 
@@ -10,7 +10,28 @@ const Meme = () => {
         }
     )
 
-    console.log(formData)
+
+    const [allMemes, setAllMemes] = useState([])
+    
+    useEffect(() => {
+
+        async function getMemes(){
+            const res = await fetch("https://api.imgflip.com/get_memes")
+            const data = await res.json()
+            setAllMemes(data.data.memes)
+        }
+            getMemes()
+    }, [])
+    
+    function getMemeImage() {
+        const randomNumber = Math.floor(Math.random() * allMemes.length)
+        const url = allMemes[randomNumber].url
+        setformData(prevMeme => ({
+            ...prevMeme,
+            randomImage: url
+        }))
+        
+    }
 
     const handleChange = (event) => {
         setformData(data => {
@@ -46,7 +67,7 @@ const Meme = () => {
                 </form>
 
                 <div className='center'>
-                    <button className='button'>Get MEME</button>
+                    <button className='button' onClick={getMemeImage}>Get MEME</button>
                 </div>
 
                 <div className='center margin'>

@@ -18,7 +18,7 @@
 }
 
 .formtext{
-  
+  font-size: 25px;
   border: black 1px solid;
   border-radius: 20px;
   width: 40%;
@@ -68,21 +68,33 @@
 .relative{
   position: relative;
 }
+.main{
+  display: flex;
+  flex-direction: column;
+}
 
 .margin{
   margin-top: 50px;
 }
 
 .top{
+  font-size: 35px;
   color: #fff;
+  text-decoration: dotted;
   position: absolute;
   margin-top: -250px;
   margin-left: 0;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
 }
 
 .bot{
+  font-size: 35px;
   color: #fff;
+  text-decoration: dotted;
   position: absolute;
   margin-top: 250px;
   margin-left: 0;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
 }
